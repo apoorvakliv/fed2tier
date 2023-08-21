@@ -1,0 +1,137 @@
+{
+    "LeNet":{
+        "server":{
+            "algorithm":"fedavg",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "LeNet",
+            "dataset": "MNIST",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    },
+    "resnet18":{
+        "server":{
+            "algorithm":"fedavg",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "resnet18",
+            "dataset": "CIFAR100",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }  
+    },
+    "resnet50":{
+        "server":{
+            "algorithm":"fedavg",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "resnet50",
+            "dataset": "CIFAR100",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    },
+    "vgg16":{
+        "server":{
+            "algorithm":"fedavg",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "vgg16",
+            "dataset": "CIFAR10",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    },
+    "AlexNet":{
+        "server":{
+            "algorithm":"fedavg",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 224,
+            "batch_size": 32,
+            "net": "AlexNet",
+            "dataset": "CIFAR10",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    }
+}

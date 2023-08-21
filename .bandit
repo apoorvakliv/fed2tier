@@ -1,0 +1,5 @@
+[bandit]
+targets: fed2tier
+
+[bandit.test]
+severity: MEDIUM,HIGH

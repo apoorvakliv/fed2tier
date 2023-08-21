@@ -1,0 +1,49 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Pytest and code coverage 
+
+on: [push]
+
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest coverage
+          pip install -r requirements.txt
+      - name: Test with pytest and report code coverage
+        run: |
+          cd unittest
+          coverage run --source=fed2tier -p test_server_algorithms.py
+          coverage run --source=fed2tier -p test_node_algorithms.py
+          coverage run --source=fed2tier -p test_datasets.py
+          coverage run --source=fed2tier -p test_models.py
+          coverage run --source=fed2tier -p test_scalability.py
+          coverage combine
+          
+        continue-on-error: true
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Run Bandit
+        run: |
+          bandit -r --ini .bandit
+          
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@v2

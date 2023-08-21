@@ -1,0 +1,137 @@
+{
+    "fedavg":{
+        "server":{
+            "algorithm":"fedavg",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "LeNet",
+            "dataset": "MNIST",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    },
+    "fedadagrad":{
+        "server":{
+            "algorithm":"fedadagrad",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "LeNet",
+            "dataset": "MNIST",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    },
+    "fedadam":{
+        "server":{
+            "algorithm":"fedadam",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "LeNet",
+            "dataset": "MNIST",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    },
+    "fedyogi":{
+        "server":{
+            "algorithm":"fedyogi",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "LeNet",
+            "dataset": "MNIST",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    },
+    "feddyn":{
+        "server":{
+            "algorithm":"feddyn",
+            "num_of_nodes":1,
+            "fraction_of_clients":1,
+            "num_of_rounds":1,
+            "initial_model_path":"initial_model.pt",
+            "max_rounds_per_node":1,
+            "accept_conn_after_FL_begin":0 ,
+            "resize_size": 32,
+            "batch_size": 32,
+            "net": "LeNet",
+            "dataset": "MNIST",
+            "threshold": 0.8
+        },
+        "client":{
+            "wait_time": 10,
+            "device": "cpu",
+            "num_of_clients": 10,
+            "niid": 4,
+            "algorithm": "fedavg",
+            "epochs": 5,
+            "mu": 0.1,
+            "rounds": 1,
+            "carbon": 0
+        }
+    }
+}
