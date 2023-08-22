@@ -19,7 +19,7 @@ def create_train_test_for_fedavg():
         def test_LeNet(self):
             print("\n==Fed Avg==")
             config = get_config('test_server_algorithms', 'fedavg')
-            tester(config, 1)
+            tester(config, 2)
     return TrainerTest
 
 def create_train_test_for_fedadagrad():
@@ -35,7 +35,7 @@ def create_train_test_for_fedadagrad():
         def test_LeNet(self):
             print("\n==Fed Adagrad==")
             config = get_config('test_server_algorithms', 'fedadagrad')
-            tester(config, 1)
+            tester(config, 2)
     return TrainerTest
 
 def create_train_test_for_fedadam():
@@ -51,7 +51,7 @@ def create_train_test_for_fedadam():
         def test_LeNet(self):
             print("\n==Fed Adam==")
             config = get_config('test_server_algorithms', 'fedadam')
-            tester(config, 1)
+            tester(config, 2)
     return TrainerTest
 
 def create_train_test_for_feddyn():
@@ -67,7 +67,7 @@ def create_train_test_for_feddyn():
         def test_LeNet(self):
             print("\n==Fed Dyn==")
             config = get_config('test_server_algorithms', 'feddyn')
-            tester(config, 1)
+            tester(config, 2)
     return TrainerTest
 
 def create_train_test_for_fedyogi():
@@ -83,7 +83,7 @@ def create_train_test_for_fedyogi():
         def test_LeNet(self):
             print("\n==Fed Yogi==")
             config = get_config('test_server_algorithms', 'fedyogi')
-            tester(config, 1)
+            tester(config, 2)
     return TrainerTest
 
 class TestTrainer_fedavg(create_train_test_for_fedavg()):

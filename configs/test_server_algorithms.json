@@ -2,7 +2,7 @@
     "fedavg":{
         "server":{
             "algorithm":"fedavg",
-            "num_of_nodes":1,
+            "num_of_nodes":2,
             "fraction_of_clients":1,
             "num_of_rounds":1,
             "initial_model_path":"initial_model.pt",
@@ -17,10 +17,10 @@
         "client":{
             "wait_time": 10,
             "device": "cpu",
-            "num_of_clients": 10,
+            "num_of_clients": 1,
             "niid": 4,
             "algorithm": "fedavg",
-            "epochs": 5,
+            "epochs": 1,
             "mu": 0.1,
             "rounds": 1,
             "carbon": 0
@@ -29,7 +29,7 @@
     "fedadagrad":{
         "server":{
             "algorithm":"fedadagrad",
-            "num_of_nodes":1,
+            "num_of_nodes":2,
             "fraction_of_clients":1,
             "num_of_rounds":1,
             "initial_model_path":"initial_model.pt",
@@ -44,10 +44,10 @@
         "client":{
             "wait_time": 10,
             "device": "cpu",
-            "num_of_clients": 10,
+            "num_of_clients": 1,
             "niid": 4,
             "algorithm": "fedavg",
-            "epochs": 5,
+            "epochs": 1,
             "mu": 0.1,
             "rounds": 1,
             "carbon": 0
@@ -56,7 +56,7 @@
     "fedadam":{
         "server":{
             "algorithm":"fedadam",
-            "num_of_nodes":1,
+            "num_of_nodes":2,
             "fraction_of_clients":1,
             "num_of_rounds":1,
             "initial_model_path":"initial_model.pt",
@@ -71,10 +71,10 @@
         "client":{
             "wait_time": 10,
             "device": "cpu",
-            "num_of_clients": 10,
+            "num_of_clients": 1,
             "niid": 4,
             "algorithm": "fedavg",
-            "epochs": 5,
+            "epochs": 1,
             "mu": 0.1,
             "rounds": 1,
             "carbon": 0
@@ -83,7 +83,7 @@
     "fedyogi":{
         "server":{
             "algorithm":"fedyogi",
-            "num_of_nodes":1,
+            "num_of_nodes":2,
             "fraction_of_clients":1,
             "num_of_rounds":1,
             "initial_model_path":"initial_model.pt",
@@ -98,10 +98,10 @@
         "client":{
             "wait_time": 10,
             "device": "cpu",
-            "num_of_clients": 10,
+            "num_of_clients": 1,
             "niid": 4,
             "algorithm": "fedavg",
-            "epochs": 5,
+            "epochs": 1,
             "mu": 0.1,
             "rounds": 1,
             "carbon": 0
@@ -110,7 +110,7 @@
     "feddyn":{
         "server":{
             "algorithm":"feddyn",
-            "num_of_nodes":1,
+            "num_of_nodes":2,
             "fraction_of_clients":1,
             "num_of_rounds":1,
             "initial_model_path":"initial_model.pt",
@@ -125,10 +125,10 @@
         "client":{
             "wait_time": 10,
             "device": "cpu",
-            "num_of_clients": 10,
+            "num_of_clients": 1,
             "niid": 4,
             "algorithm": "fedavg",
-            "epochs": 5,
+            "epochs": 1,
             "mu": 0.1,
             "rounds": 1,
             "carbon": 0
