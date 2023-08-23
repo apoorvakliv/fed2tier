@@ -4,6 +4,6 @@ concurrency = multiprocessing, thread
 
 [report]
 omit = 
-    fed2tier/server/start_server.py
-    fed2tier/client/start_client.py
+    ../fed2tier/server/start_server.py
+    ../fed2tier/client/start_client.py
     

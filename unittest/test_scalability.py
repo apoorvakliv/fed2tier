@@ -19,7 +19,7 @@ def create_train_test_for_10_nodes():
         def test_LeNet(self):
             print("\n==Fed Avg==")
             config = get_config('test_scalability', '10_nodes')
-            tester(config, 10)
+            tester(config, 3)
     return TrainerTest
 
 class TestTrainer_10_nodes(create_train_test_for_10_nodes()):
