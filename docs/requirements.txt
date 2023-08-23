@@ -4,3 +4,4 @@ sphinxcontrib-napoleon
 sphinx-autoapi
 sphinx-design
 sphinxcontrib-bibtex
+sphinx-rtd-theme
