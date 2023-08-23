@@ -2,6 +2,16 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 `Fed2Tier` is a novel two-tier federated learning framework aimed at efficient and green computation. It represents an innovative approach to distributed machine learning that emphasizes privacy, scalability, and environmental sustainability. The Fed2Tier framework seeks to enhance model generalizability by involving a greater number of edge devices in the training process.
+##resize image to 32x32
+
+<div align="center">
+  <img src="media/ai-mi_demo.png" width="50%" alt="Image">
+  <br>
+  <i>(a) Vanilla Federated Learning Architecture</i>
+  <br>
+  <i>(b) Fed2Tier Architecture</i>
+</div>
+
 
 ## Supported devices
 `Fed2Tier` has been extensively tested on and works with the following devices:
@@ -15,7 +25,7 @@
 ## Installation
 
 ```
-$ git clone https://github.com/anupamkliv/FedERA.git
+$ git clone https://github.com/apoorvakliv/fed2tier.git
 $ cd `Fed2Tier`
 $ pip install -r requirements.txt
 ```
@@ -145,37 +155,74 @@ Following federated learning algorithms are implemented in this framework:
 | FedYogi       | [Adaptive Federated Optimization](https://arxiv.org/pdf/2003.00295.pdf)                                                | ✅     | ✅    |
 | FedProx       | [FedProx: Federated Learning with Proximity](https://proceedings.mlsys.org/paper_files/paper/2020/file/1f5fe83998a09396ebe6477d9475ba0c-Paper.pdf)                                             |       | ✅    |
 
+
+## Experiments Overview
+
+In the experiments tagged as **Exp-1**, **Exp-2**, and **Exp-3** , we utilized the aggregation methods: **FedAvg**, **SCAFFOLD**, and **FedProx** . These were set within the standard FL framework. We incorporated client groups \( M \) consisting of 20, 40, and 60 members and designated \( v \) as 50. Throughout these experiments:
+
+- 50% of our clients operated with a β value of 1 (i.i.d.)
+- The remaining clients operated with β=4 (non-i.i.d)
+
+To understand the performance of **Fed2Tier**, we initiated it with \( K=2 \). Within this configuration:
+
+- One IN utilized a β=1 (i.i.d.) data pattern and adopted the **FedAvg** aggregation technique.
+- A separate node, operating under β=4 (non-i.i.d.), chose either the **SCAFFOLD** (observed in Exp-4) or the **FedProx** (for Exp-5) aggregation methodology.
+
+The GS applied **FedAvg** for merging models received from the IN. These trials were executed with client numbers \( N \) being 20, 40, and 60, evenly spread out across the IN.
+
+
+
+### Benchmark of the proposed system with baselines
+
+The following tables provide comparative analysis in terms of total time taken, carbon emitted, and accuracy between vanilla FL and *Fed2Tier*.
+
+#### Time (Min)
+
+| No. of client | Vanilla - Exp-1 | Vanilla - Exp-2 | Vanilla - Exp-3 | Proposed - Exp-4 | Proposed - Exp-5 |
+|---------------|-----------------|-----------------|-----------------|------------------|------------------|
+| 20            | 252.94          | 260.55          | 304.62          | 206.97           | 225.2            |
+| 40            | 274.34          | 281.38          | 337.95          | 222.35           | 250.1            |
+| 60            | 294.98          | 300.41          | 351.63          | 241.98           | 260.8            |
+
+#### Carbon Emission (Kg)
+
+| No. of client | Vanilla - Exp-1 | Vanilla - Exp-2 | Vanilla - Exp-3 | Proposed - Exp-4 | Proposed - Exp-5 |
+|---------------|-----------------|-----------------|-----------------|------------------|------------------|
+| 20            | 508             | 539.5           | 599             | 421.9            | 444.9            |
+| 40            | 565.5           | 588.5           | 686             | 460.9            | 522.9            |
+| 60            | 556.5           | 598.5           | 706.5           | 486.6            | 510.9            |
+
+#### Accuracy (%)
+
+| No. of client | Vanilla - Exp-1 | Vanilla - Exp-2 | Vanilla - Exp-3 | Proposed - Exp-4 | Proposed - Exp-5 |
+|---------------|-----------------|-----------------|-----------------|------------------|------------------|
+| 20            | 98.53           | 93.45           | 98.68           | 99.03            | 98.96            |
+| 40            | 97.97           | 92.44           | 98.17           | 98.92            | 98.94            |
+| 60            | 98.17           | 89.86           | 97.92           | 98.85            | 98.89            |
+
+
+### Accuracy plots with (a) 20 clients, (b) 40 clients, and (c) 60 clients for Exp 1-5
+
+<div align="center">
+    <img src="media/accuracy_20_clients.PNG" width="30%" height=200px alt="Image">
+    <img src="media/accuracy_40_clients.JPG" width="30%" height=200px alt="Image">
+    <img src="media/accuracy_60_clients.JPG" width="30%" height=200px alt="Image">
+</div>
+
+### Loss plots with (a) 20 clients, (b) 40 clients, and (c) 60 clients for Exp 1-5
+<div align="center">
+    <img src="media/Loss_20_clients.png" width="30%" height=200px alt="Image">
+    <img src="media/Loss_40_clients.png" width="30%" height=200px alt="Image">
+    <img src="media/Loss_60_clients.png" width="30%" height=200px alt="Image">
+</div>
+
 ## Datasets & Data Partition
 
 In real-world applications, Federated Learning (FL) must manage a multitude of data distribution situations, encompassing both iid and non-iid contexts. While there are established datasets and partition strategies for benchmark data, arranging datasets tailored to specific research challenges can be intricate. Furthermore, maintaining the results of these partitions during simulations can be challenging for researchers.
 
 ### Data Partition
 
-We provide multiple Non-IID data partition schemes. Here we show the data partition visualization of several common used datasets as the examples.
-
-#### Balanced IID partition
-
-Each client has same number of samples, and same distribution for all class samples. 
-
-<div align="left">
-  <img src="media/data_distribution/class_stats_0.png" width="300" />
-  <img src="media/data_distribution/sample_stats_0.png" width="300" /> 
-</div>
-
-
-#### Non-IID partition 2
-
-<div align="left">
-    <img src="media/data_distribution/class_stats_1.png" width="300" />
-    <img src="media/data_distribution/sample_stats_1.png" width="300" />
-</div>
-
-#### Non-IID partition 3
-
-<div align="left">
-    <img src="media/data_distribution/class_stats_2.png" width="300" />
-    <img src="media/data_distribution/sample_stats_2.png" width="300" />
-</div>
+We provide multiple Non-IID data partition schemes. 
 
 ### Datasets Supported
 
