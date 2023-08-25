@@ -7,7 +7,7 @@ Datasets & Models
 Datasets
 ========
 
-The datasets used by **Fed2tIER** are acquired by fetching them from torchvision.datasets. As of now, Fed2Tier supports the following datasets:
+The datasets used by **Fed2Tier** are acquired by fetching them from torchvision.datasets. As of now, Fed2Tier supports the following datasets:
 
 * MNIST
 * FashionMNIST

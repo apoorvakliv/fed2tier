@@ -27,10 +27,6 @@ Overview
 
 **Fed2Tier** introduces a unique two-level federated learning system focused on achieving both efficient and eco-friendly computation. This method in distributed machine learning prioritizes privacy, scalability, and a greener footprint. By categorizing clients based on their individual characteristics and subsequently grouping them, Fed2Tier effectively addresses variations in underlying data distributions. The introduction of intermediate nodes has concurrently reduced both communication rounds and carbon emissions during training, ensuring increased privacy and efficiency.
 
-.. figure:: ../imgs/Framework_overview.png
-   :align: center
-
-   (a) vanilla federated learning architecture ,(b) Fed2Tier architecture.
 
 Key Features
 ------------
@@ -44,6 +40,7 @@ Architecture
 
 .. figure:: ../imgs/Framework_overview.png
    :align: center
+
    (a) vanilla federated learning architecture ,(b) Fed2Tier architecture.
 
 Benefits
