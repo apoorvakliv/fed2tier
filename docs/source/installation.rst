@@ -42,7 +42,7 @@ Follow this procedure to prepare the environment and install **Fed2Tier**:
         .. code-block:: console
         
             $ git clone https://github.com/apoorvakliv/fed2tier
-            $ cd Fed2Tier
+            $ cd fed2tier
 
     2. Install dependencies:
     

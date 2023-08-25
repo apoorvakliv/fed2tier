@@ -16,7 +16,7 @@ Contributing to Fed2Tier
 
 If you wish to contribute to the project by submitting code, you can do so by creating a Pull Request. By contributing code, you agree that your contributions will be licensed under `Apache License, Version 2.0 <https://www.apache.org/licenses/LICENSE-2.0.html>`_.
 
-We encourage you to contribute to the enhancement of **Fed2Tier** or the implementation of existing FL methods within **FedERA**. The recommended method for contributing to **FedERA** is to fork the main repository on GitHub, clone it, and develop on a branch. Follow these steps:
+We encourage you to contribute to the enhancement of **Fed2Tier** or the implementation of existing FL methods within **Fed2Tier**. The recommended method for contributing to **Fed2Tier** is to fork the main repository on GitHub, clone it, and develop on a branch. Follow these steps:
 
 1. Click on "Fork" to fork the project repository.
 
@@ -30,7 +30,7 @@ We encourage you to contribute to the enhancement of **Fed2Tier** or the impleme
     
     .. code-block:: shell-session
         
-        $ cd Fed2Tier
+        $ cd fed2tier
 
 3. Create a new branch to save your changes using the command
 

@@ -1,8 +1,7 @@
-FedERA
+Fed2Tier
 ===================================
 
-**FedERA** is a highly dynamic and customizable framework that can accommodate many use cases with flexibility by implementing several functionalities over different federated learning algorithms, and essentially creating a plug-and-play architecture to accommodate different use cases.
-
+**Fed2Tier** is a novel two-tier federated learning framework aimed at efficient and green computation. It represents an innovative approach to distributed machine learning that emphasizes privacy, scalability, and environmental sustainability. The Fed2Tier framework seeks to enhance model generalizability by involving a greater number of edge devices in the training process.
 Check out the :doc:`overview` section for further information, including
 how to :ref:`installation` the project.
 
@@ -35,7 +34,7 @@ Contents
 Contacts
 ........
 
-Contact the **FedERA** development team through Github issues or email:
+Contact the **Fed2Tier** development team through Github issues or email:
 
-- Development Team: federa.team@gmail.com
+- Development Team: fed2tier.team@gmail.com
 
